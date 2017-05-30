@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="residence_provision_system" Class="rpsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=OMORFARUKMA0289\SQLEXPRESS;Initial Catalog=residence_provision_system;Integrated Security=True" SettingsObjectName="Residence_provision_system.Properties.Settings" SettingsPropertyName="residence_provision_systemConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.RENTER" Member="RENTERs">
+    <Type Name="RENTER">
+      <Column Name="r_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="rf_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="rm_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="pt_address" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="r_contact" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="r_occupation" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="r_off_add" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="r_off_contact" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="rented_flat" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="renter_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="renter_family_mamber" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="rent_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="renter_image" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.login" Member="logins">
+    <Type Name="login">
+      <Column Name="user_id" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.building" Member="buildings">
+    <Type Name="building">
+      <Column Name="b_id" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="owner_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="contact" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bill_Table" Member="Bill_Tables">
+    <Type Name="Bill_Table">
+      <Column Name="flat" Type="System.String" DbType="VarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Bill_Date" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="House_Rent" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Electricity_Bill" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Water_Bill" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Gas_Bill" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Service_Charge" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
